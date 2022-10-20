@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Headlines</title>
+    </head>
+    <form>
+        <input type="text" name="city" placeholder="weather search">
+        <input type="submit" value="Submit" />
+    </form>
+    <form>
+        <input type="text" name="publication" placeholder="search" />
+        <input type="submit" value="Submit" />
+    </form>
+    <body>
+        <h1>Headlines</h1>
+        <h2>Current weather</h2>
+        <p>City: <b>{{weather.city}}</b></p>
+        <p>{{weather.description}} |{{weather.temperature}}&#8451;</p>
+        <h2>Hadlines</h2>
+        {% for article in articles %}
+            <b><a href="{{article.link}}">{{article.title}}</a></b><br />
+            <i>{{article.published}}</i><br />
+            <p>{{article.summary}}</p>
+            <hr />
+        {% endfor %}
+    </body>
+</html>
