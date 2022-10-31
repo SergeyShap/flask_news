@@ -67,7 +67,6 @@ def home():
                            rate=rate,
                            )
 
-
 def get_news(query):
     if not query or query.lower() not in RSS_FEEDS:
         publication = DEFAULT["publication"]
